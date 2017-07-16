@@ -1,0 +1,29 @@
+{
+  "name": "daimond_shine",
+  "version": "1.0.0",
+  "description": "Cleaning company website",
+  "main": "app.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "bower": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://drewrg@github.com/drewrg/Diamond_shine.git"
+  },
+  "keywords": [
+    "Cleaning"
+  ],
+  "author": "Zhirayr Shirinyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drewrg/Diamond_shine/issues"
+  },
+  "homepage": "https://github.com/drewrg/Diamond_shine#readme"
+}

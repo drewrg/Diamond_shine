@@ -105,17 +105,74 @@ textarea {
     font-family: GreatVibes;
     src: url(../assets/fonts/GreatVibes-Regular.ttf);
 }
+
 @font-face {
     font-family: NotoSans;
     src: url(../assets/fonts/NotoSansArmenian-Regular.ttf);
     font-weight: normal;
 }
+
 @font-face {
     font-family: NotoSans;
     src: url(../assets/fonts/NotoSansArmenian-Bold.ttf);
     font-weight: bold;
 }
 
+/* ==== Row/Columns ===================*/
+
+.row {
+    margin: 0 -5px;
+    margin-bottom: 10px;
+}
+
+.row:after {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    width: 100%;
+    height: 0;
+    clear: both;
+}
+
+.column {
+    width: 100%;
+    float: left;
+}
+
+.md-1 {
+    width: 100%;
+    padding: 0 5px;
+}
+
+.md-2 {
+    width: 50%;
+    padding: 0 5px;
+}
+
+.md-3 {
+    width: 33.333333%;
+    padding: 0 5px;
+}
+
+.md-4 {
+    width: 25%;
+    padding: 0 5px;
+}
+
+.md-5 {
+    width: 20%;
+    padding: 0 20px;
+}
+
+.md-6 {
+    width: 16.666667%;
+    padding: 0 5px;
+}
+
+.md-12 {
+    width: 8.333333%;
+    padding: 0 5px;
+}
 
 /* ==== Global ===================*/
 
@@ -132,32 +189,50 @@ body {
     font-weight: 100;
 }
 
-/*--- Navigation*/
-#top-nav {
+/*---navigation*/
+
+.gallery-nav {
+    display: inline-block;
+}
+
+nav {
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid lightgray;
     border-radius: 6px;
     background-image: url(../img/navigation_bg.png);
+    background-size: contain;
 }
 
-#top-nav ul {
+nav .align-center {
+    text-align: center;
+}
+
+nav ul {
+    display: inline-block;
     list-style: none;
+    vertical-align: top;
     padding: 0;
 }
 
-#top-nav li a{
+nav li {
+    float: left;
+}
+
+nav li a {
+    overflow: hidden;
     position: relative;
     padding: 0 15px;
     float: left;
-    border-left:1px solid #DDD;
-    border-right:0;
+    border-left: 1px solid #DDD;
+    border-right: 0;
     height: 60px;
     text-transform: uppercase;
     font-size: 15px;
-    color: #252525;
+    color: dimgray;
 }
-#top-nav li a:hover {
+
+nav li a:hover {
     background-color: steelblue;
     -webkit-box-shadow: inset 0px 0px 8px 3px #506578;
     -moz-box-shadow: inset 0px 0px 8px 3px #506578;
@@ -165,37 +240,49 @@ body {
     border-color: #506578;
     color: #F2F2F2;
 }
-#top-nav li:last-child a {
-    border-right:1px solid #DDD;
+
+nav li a:hover i {
+    color: #F2F2F2;
 }
-#top-nav li p {
-    margin-top: 32px;
+
+nav li:last-child a {
+    border-right: 1px solid #DDD;
+}
+
+nav li p {
+    line-height: 60px;
+}
+
+nav.main li p {
+    margin-top: 11px;
 
 }
-#top-nav i {
-    color: darkgray;
+
+nav i {
+    color: dimgray;
     position: absolute;
     top: 12px;
     left: 0;
     right: 0;
     text-align: center;
 }
-#top-nav i:hover {
-    color: #F2F2F2;
-}
+
 #cleaning-ADV {
     width: 100%;
 }
+
 .info {
     text-align: center;
     font-size: 13px;
 }
+
 .info > div {
     float: left;
-    width:50%;
+    width: 50%;
     padding: 10px;
     padding-left: 0px;
 }
+
 .info div:last-child {
     float: right;
     padding-right: 0px;
@@ -208,6 +295,7 @@ body {
     background: lightgray;
     border: 15px solid steelblue;
 }
+
 #main-slider h1 {
     text-align: center;
     width: 100%;
@@ -215,8 +303,23 @@ body {
     margin-top: 144px;
 }
 
-
 /* ==== Content ===================*/
+
+#gallery {
+    margin-top: 60px;
+}
+
+.image {
+    cursor: pointer;
+    width: 100%;
+    height: 160px;
+    background-color: lightgray;
+    background-image: url("../img/placeholder.png");
+    background-size: 65px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 5px solid gray;
+}
 
 /* ==========================================================================
    Helper classes
@@ -235,6 +338,10 @@ body {
     visibility: hidden;
     height: 1px;
     clear: both;
+}
+
+.content-center {
+    text-align: center;
 }
 
 /*
@@ -263,7 +370,7 @@ body {
 
 /*
  * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
+ * to be focusable whennavigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
 

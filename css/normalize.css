@@ -20,6 +20,9 @@ body {
     margin: 0;
     color: #252525;
 }
+p {
+    margin: 0;
+}
 
 /**
  * Clear floats
